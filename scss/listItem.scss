@@ -1,0 +1,13 @@
+
+
+.listItem {
+	height: 5rem;
+	width: auto;
+	background-color: lightblue;
+	text-align: center;
+	font-size: 18px;
+}
+
+.listItem:focus {
+	background-color: red;
+}

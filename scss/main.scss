@@ -1,0 +1,40 @@
+
+html,
+body,
+input,
+#root,
+#app {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  font-size: 10px;
+  overflow: hidden;
+  background-color: white;
+  font-family: "Open Sans";
+}
+
+.focus {
+  background-color: grey;
+}
+
+.statusbar-placeholder {
+    height: var(--statusbar-height);
+    background-color: var(--header-background);
+ }
+
+
+ .h1 {
+ 	font-size: 1.7rem;
+	font-weight: 300;
+ }
+
+ .header {
+	height: var(--header-height);
+	line-height: var(--header-height);
+	padding: 0 1rem;
+	background-color: var(--header-background);
+	text-align: center;
+	color: var(--color-gs00);
+ }
+
