@@ -5,6 +5,7 @@ export default class DataStore extends BaseModule {
 
 	constructor(){
 		super();
+		
 	}
 
 
