@@ -2,6 +2,7 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import BaseComponent from './base/baseComponent';
+//import BaseComponent from 'base-component';
 import ListItem from './listItem';
 import SimpleNavigationHelper from './base/simpleNavigationHelper';
 import Service from './base/service';
