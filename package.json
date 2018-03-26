@@ -4,6 +4,7 @@
   "description": "test proj",
   "main": "index.js",
   "dependencies": {
+    "babel": "^6.23.0",
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.3",
     "babel-preset-latest": "^6.24.1",
@@ -11,10 +12,12 @@
     "g-base-component": "git+ssh://git@github.com:gaoguangnihao/g-base-component.git",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
+    "simple-navigation-helper": "git+ssh://git@git.kaiostech.com:shared/simple-navigation-helper.git",
     "webpack": "^3.8.1"
   },
   "devDependencies": {
     "ava": "^0.25.0",
+    "babel-cli": "^6.26.0",
     "css-loader": "^0.28.10",
     "extract-text-webpack-plugin": "^3.0.2",
     "style-loader": "^0.20.2",

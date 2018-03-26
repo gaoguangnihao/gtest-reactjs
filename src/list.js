@@ -2,11 +2,13 @@
 import React from 'react';
 import ReactDom from 'react-dom';
 import BaseComponent from './base/baseComponent';
-//import BaseComponent from 'base-component';
 import ListItem from './listItem';
 import SimpleNavigationHelper from './base/simpleNavigationHelper';
+//import SimpleNavigationHelper from '../node_modules/simple-navigation-helper';
 import Service from './base/service';
 import DataStore from './dataStore';
+
+import {compare} from './base/utils.js'
 
 export default class List extends BaseComponent {
 
@@ -14,8 +16,7 @@ export default class List extends BaseComponent {
 		super(props);
 		this.DEBUG = true;
 		this.prefix = 'list';
-		this.debug(' constructor');
-
+		this.debug(' constructor 12345');
 	}
 
 	componentWillMount() {

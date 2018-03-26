@@ -990,6 +990,10 @@ babel-types@^6.19.0, babel-types@^6.24.1, babel-types@^6.26.0:
     lodash "^4.17.4"
     to-fast-properties "^1.0.3"
 
+babel@^6.23.0:
+  version "6.23.0"
+  resolved "https://registry.yarnpkg.com/babel/-/babel-6.23.0.tgz#d0d1e7d803e974765beea3232d4e153c0efb90f4"
+
 babylon@^6.1.0, babylon@^6.18.0:
   version "6.18.0"
   resolved "https://registry.yarnpkg.com/babylon/-/babylon-6.18.0.tgz#af2f3b88fa6f5c1e4c634d1a0f8eac4f55b395e3"
@@ -5057,6 +5061,10 @@ shebang-regex@^1.0.0:
 signal-exit@^3.0.0, signal-exit@^3.0.2:
   version "3.0.2"
   resolved "https://registry.yarnpkg.com/signal-exit/-/signal-exit-3.0.2.tgz#b5fdc08f1287ea1178628e415e25132b73646c6d"
+
+"simple-navigation-helper@git+ssh://git@git.kaiostech.com:shared/simple-navigation-helper.git":
+  version "0.0.23"
+  resolved "git+ssh://git@git.kaiostech.com:shared/simple-navigation-helper.git#430630773b7cd6f6f76e44a907cf8db5ba384f7f"
 
 slash@^1.0.0:
   version "1.0.0"
