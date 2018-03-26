@@ -1002,14 +1002,6 @@ balanced-match@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-1.0.0.tgz#89b4d199ab2bee49de164ea02b89ce462d71b767"
 
-"base-component@git+ssh://git@git.kaiostech.com:shared/base_component.git":
-  version "0.0.10"
-  resolved "git+ssh://git@git.kaiostech.com:shared/base_component.git#39aa164ee6b097414fee9a331558c8f32184db55"
-  dependencies:
-    react "15.1.0"
-    react-dom "15.1.0"
-    service "git+ssh://git@git.kaiostech.com:shared/service.git"
-
 base64-js@^1.0.2:
   version "1.2.3"
   resolved "https://registry.yarnpkg.com/base64-js/-/base64-js-1.2.3.tgz#fb13668233d9614cf5fb4bce95a9ba4096cdf801"
@@ -2366,7 +2358,7 @@ faye-websocket@~0.11.0:
   dependencies:
     websocket-driver ">=0.5.1"
 
-fbjs@^0.8.0, fbjs@^0.8.16:
+fbjs@^0.8.16:
   version "0.8.16"
   resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-0.8.16.tgz#5e67432f550dc41b572bf55847b8aca64e5337db"
   dependencies:
@@ -4648,10 +4640,6 @@ rc@^1.0.1, rc@^1.1.6, rc@^1.1.7:
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
 
-react-dom@15.1.0:
-  version "15.1.0"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-15.1.0.tgz#d0c2b24c8b47a41a2b9ec766662d4e686f353153"
-
 react-dom@^16.2.0:
   version "16.2.0"
   resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.2.0.tgz#69003178601c0ca19b709b33a83369fe6124c044"
@@ -4660,14 +4648,6 @@ react-dom@^16.2.0:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
     prop-types "^15.6.0"
-
-react@15.1.0:
-  version "15.1.0"
-  resolved "https://registry.yarnpkg.com/react/-/react-15.1.0.tgz#5f7a9f085a00509898efd2b24cb12ea1dfaf8b40"
-  dependencies:
-    fbjs "^0.8.0"
-    loose-envify "^1.1.0"
-    object-assign "^4.1.0"
 
 react@^16.2.0:
   version "16.2.0"
@@ -5018,10 +4998,6 @@ serve-static@1.13.2:
     escape-html "~1.0.3"
     parseurl "~1.3.2"
     send "0.16.2"
-
-"service@git+ssh://git@git.kaiostech.com:shared/service.git":
-  version "0.0.4"
-  resolved "git+ssh://git@git.kaiostech.com:shared/service.git#6f1dba66bb4bab1f5b87c0dd99c0d71cb783780f"
 
 set-blocking@^2.0.0, set-blocking@~2.0.0:
   version "2.0.0"
