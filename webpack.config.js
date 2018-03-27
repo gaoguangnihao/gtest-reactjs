@@ -30,6 +30,25 @@ module.exports = {
             loader: ExtractTextPlugin.extract('css-loader', 'css!sass', { publicPath: './'})
           },
 
+          {
+            test: /\.(ttf|eot|png|svg|woff(2)?)(\?[a-z0-9]+)?$/,
+            use: [{
+              loader: 'file-loader',
+              options: {
+                name: '[name]-[hash:6].[ext]'
+              }
+            }]
+          },
+          {
+            test: /\.properties$/,
+            use: [{
+              loader: 'file-loader',
+              options: {
+                name: '[name].[ext]'
+              }
+            }]
+          }
+
       ]
   },
 

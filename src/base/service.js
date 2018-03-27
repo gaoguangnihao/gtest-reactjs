@@ -221,7 +221,7 @@ var Service = {
   },
 
   debug: function sys_debug() {
-    var DEBUG = false;
+    var DEBUG = true;
     if (DEBUG) {
       console.log('[Service]' +
         '[' + Service.currentTime() + ']' +
@@ -229,4 +229,5 @@ var Service = {
     }
   }
 };
+
 export default Service;

@@ -9,6 +9,7 @@
     "babel-loader": "^7.1.3",
     "babel-preset-latest": "^6.24.1",
     "babel-preset-react": "^6.24.1",
+    "file-loader": "^1.1.11",
     "g-base-component": "git+ssh://git@github.com:gaoguangnihao/g-base-component.git",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",

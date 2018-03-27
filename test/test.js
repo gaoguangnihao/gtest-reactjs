@@ -1,6 +1,6 @@
 import test from 'ava';
-import {fibonacci} from '../src/base/utils.js';
-import {compare} from '../src/base/utils.js';
+import {fibonacci} from '../src/utils/utils.js';
+import {compare} from '../src/utils/utils.js';
 
 test('main', t => {
     // 断言

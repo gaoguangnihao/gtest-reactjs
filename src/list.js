@@ -8,7 +8,8 @@ import SimpleNavigationHelper from './base/simpleNavigationHelper';
 import Service from './base/service';
 import DataStore from './dataStore';
 
-import {compare} from './base/utils.js'
+import {compare} from './utils/utils.js';
+import Pinyin from './utils/pinyin.js';
 
 export default class List extends BaseComponent {
 
@@ -30,6 +31,12 @@ export default class List extends BaseComponent {
 		// test service 
 		Service.register('onKeyDown', this);
 
+		// test utils
+		var array = ['张','高','王','赵'];
+		var result = array.sort(compare);
+		this.debug(result);
+
+		this.debug(Pinyin.getFullChars('张').toLowerCase());
 	}
 
 	componentWillUnmount() {
@@ -59,6 +66,7 @@ export default class List extends BaseComponent {
         			onClick={(e) => {this.onClick(e)}}
         			tabindex="-1"
         		>
+        			<div className='icon'></div>
         			<input className='navigable'
         			ref={(c) => {this.input = c}}
         			 onKeyDown={(e) => {this.onKeyDown(e)}}/>
