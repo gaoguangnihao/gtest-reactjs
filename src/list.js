@@ -13,10 +13,11 @@ import {compare} from './utils/utils.js';
 import Pinyin from './utils/pinyin.js';
 
 export default class List extends BaseComponent {
-
+	DEBUG = true;
+	
 	constructor(props) {
 		super(props);
-		this.DEBUG = true;
+
 		this.prefix = 'list';
 		this.debug(' constructor 12345');
 	}

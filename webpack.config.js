@@ -18,12 +18,13 @@ module.exports = {
   module: {
       loaders: [
           {
-              test: /\.js$/, // babel 转换为兼容性的 js
-       //       exclude: /node_modules/,
+            test: /.jsx?$/,
+            use: [{
               loader: 'babel-loader',
               query: {
-                  presets: ['react', 'latest']
+                presets: ['react', 'es2015', 'stage-0']
               }
+            }]
           },
           {
             test: /\.(scss|css)$/,
