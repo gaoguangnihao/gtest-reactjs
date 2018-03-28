@@ -2,7 +2,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 
 module.exports = {
-  devtool: 'eval-source-map',
+  devtool: '#source-map',
   entry:  __dirname + "/src/app.js",//已多次提及的唯一入口文件
   output: {
     path: __dirname + "/dist",//打包后的文件存放的地方
@@ -19,7 +19,7 @@ module.exports = {
       loaders: [
           {
               test: /\.js$/, // babel 转换为兼容性的 js
-              exclude: /node_modules/,
+       //       exclude: /node_modules/,
               loader: 'babel-loader',
               query: {
                   presets: ['react', 'latest']

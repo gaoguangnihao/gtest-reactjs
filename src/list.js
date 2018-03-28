@@ -1,7 +1,8 @@
 
 import React from 'react';
 import ReactDom from 'react-dom';
-import BaseComponent from './base/baseComponent';
+//import BaseComponent from './base/baseComponent';
+import BaseComponent from 'g-base-component';
 import ListItem from './listItem';
 import SimpleNavigationHelper from './base/simpleNavigationHelper';
 //import SimpleNavigationHelper from '../node_modules/simple-navigation-helper';
