@@ -43,9 +43,45 @@ var fibonacci = function (n) {
     return fibonacci(n-1) + fibonacci(n-2);
 };
 
+const orders = {
+  'cc':'A Á B C Č D Ď E É Ě F G H Ch I Í J K L M N Ň O Ó P Q R Ř S Š T Ť U Ú Ů V W X Y Ý Z Ž',
+  'zh':'A,B,C'
+}
+
+String.prototype.localeCompareLocale = function (str, lang) {
+  var order = orders[lang]  && orders[lang].split(' ');
+  if (!str || '' === str || '' === this || !order) {
+      return this.localeCompare(str);
+  }
+
+  function sortByL(a, b) {
+    return order.indexOf(a) == order.indexOf(b) ? 0 : 
+      (order.indexOf(a) > order.indexOf(b) ? 1 : -1);
+  }
+
+  var length = this.length > str.length ? str.length : this.length;
+  for (var i = 0; i < length; i ++) {
+    if (sortByL(this.charAt(i), str.charAt(i)) != 0) {
+      return sortByL(this.charAt(i), str.charAt(i));
+    }
+  }
+  return this.length > str.length;
+}
+
+var sort = function (arr) {
+  console.log(arr);
+  arr.sort((a, b) => {
+    return a.localeCompareLocale(b, 'cc');
+  });
+
+  console.log('localeCompare:' + arr);
+  return arr;
+}
+
 
 exports.compare = compare;
 exports.fibonacci = fibonacci;
+exports.sort = sort;
 
 
 
