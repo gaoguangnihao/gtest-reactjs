@@ -45,33 +45,40 @@ var fibonacci = function (n) {
 
 const orders = {
   'cc':'A Á B C Č D Ď E É Ě F G H Ch I Í J K L M N Ň O Ó P Q R Ř S Š T Ť U Ú Ů V W X Y Ý Z Ž',
-  'zh':'A,B,C'
+  'zh':' '
 }
 
 String.prototype.localeCompareLocale = function (str, lang) {
+  var self = this;
   var order = orders[lang]  && orders[lang].split(' ');
-  if (!str || '' === str || '' === this || !order) {
-      return this.localeCompare(str);
+  if (!str || '' === str || '' === self || !order ) {
+      return self.localeCompare(str);
   }
 
   function sortByL(a, b) {
+    // Chiness
+    if ('zh' == lang) {
+      a = Pinyin.getFullChars(a).toLowerCase();
+      b = Pinyin.getFullChars(b).toLowerCase();
+      return a.localeCompare(b);
+    }
     return order.indexOf(a) == order.indexOf(b) ? 0 : 
       (order.indexOf(a) > order.indexOf(b) ? 1 : -1);
   }
 
-  var length = this.length > str.length ? str.length : this.length;
+  var length = self.length > str.length ? str.length : self.length;
   for (var i = 0; i < length; i ++) {
-    if (sortByL(this.charAt(i), str.charAt(i)) != 0) {
-      return sortByL(this.charAt(i), str.charAt(i));
+    if (sortByL(self.charAt(i), str.charAt(i)) != 0) {
+      return sortByL(self.charAt(i), str.charAt(i));
     }
   }
-  return this.length > str.length;
+  return self.length > str.length;
 }
 
-var sort = function (arr) {
+var sort = function (arr, lang) {
   console.log(arr);
   arr.sort((a, b) => {
-    return a.localeCompareLocale(b, 'cc');
+    return a.localeCompareLocale(b, lang ? lang : 'cc');
   });
 
   console.log('localeCompare:' + arr);
@@ -81,7 +88,7 @@ var sort = function (arr) {
 
 exports.compare = compare;
 exports.fibonacci = fibonacci;
-exports.sort = sort;
+exports.sortLocale = sort;
 
 
 

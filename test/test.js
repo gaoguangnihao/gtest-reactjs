@@ -1,5 +1,5 @@
 import test from 'ava';
-import {fibonacci, compare, sort} from '../src/utils/utils.js';
+import {fibonacci, compare, sortLocale} from '../src/utils/utils.js';
 
 test('main', t => {
     // 断言
@@ -8,20 +8,20 @@ test('main', t => {
 
 
 test('compare', t => {
-	var array = ['张','高','王','赵'];
-	var arrayResult = ['高','王','张','赵'];
+	var array = ['张小里','高','王','赵啊', '张啊', ' '];
+	var arrayResult = [' ', '高','王','张啊', '张小里', '赵啊'];
 
-	var result = array.sort(compare);
+	var result = sortLocale(array, 'zh');  //= array.sort(compare);
 	for (var i = result.length - 1; i >= 0; i--) {
 		t.is(result[i] , arrayResult[i]);
 	}
 });
 
 test('sort', t => {
-	var array = ['ŘS', 'AÉWE', 'ÁXCC', 'ÁX', 'BK', 'ÁXC', 'ÁXCB'];
-	var arrayResult = ['AÉWE','ÁX', 'ÁXC', 'ÁXCB', 'ÁXCC', 'BK', 'ŘS'];
+	var array = ['ŘS', ' ', 'AÉWE', '', 'ÁXCC', 'ÁX', 'BK', 'ÁXC', 'ÁXCB'];
+	var arrayResult = ['',' ', 'AÉWE','ÁX', 'ÁXC', 'ÁXCB', 'ÁXCC', 'BK', 'ŘS'];
 
-	var result = sort(array);
+	var result = sortLocale(array);
 	for (var i = result.length - 1; i >= 0; i--) {
 		t.is(result[i] , arrayResult[i]);
 	}
