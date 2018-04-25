@@ -28,6 +28,7 @@ var Pinyin = (function (){
             var reg = new RegExp('[a-zA-Z0-9\- ]');
             for (var i=0, len = str.length; i < len; i++){
                 var ch = str.substr(i,1), unicode = ch.charCodeAt(0);
+                console.log('getFullChars, ch = ' + ch + ' unicode = ' + unicode);
                 if(unicode > 40869 || unicode < 19968){
                     result += ch;
                 }else{
