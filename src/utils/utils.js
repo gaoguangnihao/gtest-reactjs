@@ -1,5 +1,28 @@
 
 var Pinyin = require('./pinyin');
+//var testjs = require('./testjs');
+var testObj = require('./testjs');
+
+/**
+* test js
+*/
+
+var fibonacci = function (n) {
+
+      // function  need new.
+ //   var test = new testjs();
+ //   test.init();
+ //   console.log(test.publicvar);
+
+     //  object  can not new 
+ //   var obj = new testObj();
+    console.log(testObj.locatvar);
+    testObj.setvar("123123");
+    console.log(testObj.locatvar);
+
+    return n;
+};
+
 
 /**
 *  Compare tow chiness word.
@@ -30,18 +53,6 @@ var compare = function (val1,val2) {
         return val1.length - val2.length;
     }
 }
-
-var fibonacci = function (n) {
-    if (n === 0) {
-        return 0;
-    }
-
-    if (n === 1) {
-        return 1;
-    }
-
-    return fibonacci(n-1) + fibonacci(n-2);
-};
 
 var debug = function (msg) {
   console.log(msg);

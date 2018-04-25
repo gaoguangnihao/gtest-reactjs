@@ -3,7 +3,7 @@ import {fibonacci, compare, sortLocale} from '../src/utils/utils.js';
 
 test('main', t => {
     // 断言
-    t.is(fibonacci(10), 55);
+    t.is(fibonacci(10), 10);
 });       
 
 

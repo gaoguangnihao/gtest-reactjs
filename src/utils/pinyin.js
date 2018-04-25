@@ -1,6 +1,7 @@
 
 var Pinyin = (function (){
     var Pinyin = function (ops){
+        console.log('Pinyin constructor');
         this.initialize(ops);
     },
      
