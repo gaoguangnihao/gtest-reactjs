@@ -25,7 +25,7 @@ export default class ListItem extends BaseComponent {
 	    return <div id="list" className='listItem navigable' tabindex="-1"
 	   	onKeyDown={(e) => this.onKeyDown(e)}
 	    >
-	    			<div className="statusbar-placeholder">item {this.state.index}</div>
+	    			<div className="">item {this.state.index}</div>
 	    		</div>
 	}
 }

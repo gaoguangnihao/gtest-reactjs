@@ -18,7 +18,7 @@ export default class List extends BaseComponent {
 	constructor(props) {
 		super(props);
 
-		this.prefix = 'list';
+		this.prefix = 'input';
 		this.debug(' constructor 12345');
 	}
 
@@ -56,19 +56,14 @@ export default class List extends BaseComponent {
 	}
     render() {
     	this.debug("render");
-    	let dom = [];
-    	for (var i = 0; i < 3; i++) {
-    		dom.push(
-    			<ListItem index={i}> </ListItem>
-    		);
-    	}
-
-        return <div id="list" 
-        			ref={(c) => {this.element = c}}
-        			onClick={(e) => {this.onClick(e)}}
-        			tabindex="-1"
-        		>
-        			{dom}
-        		</div>
+        return <div 
+        		ref={(c) => {this.element = c}}
+        		onClick={(e) => {this.onClick(e)}}
+        		tabindex="-1">
+                  <div className='icon'></div>
+                  <input className='navigable'
+                    ref={(c) => {this.input = c}}
+                     onKeyDown={(e) => {this.onKeyDown(e)}}/>
+                </div>
     }
 }
