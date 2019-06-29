@@ -19,6 +19,7 @@ export default class ListItem extends BaseComponent {
 		this.debug("onKeyDown key:" + e.key);
 		Service.request('onKeyDown', e.key);
 
+    navigator.mozGmodule.setTestData(this.props.index);
 	}
 	render() {
 		this.debug("render");
