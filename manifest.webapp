@@ -2,6 +2,7 @@
   "name": "Gtest",
   "description": "Gtest webpack app",
   "launch_path": "/index.html",
+  "fullscreen": true,
   "type": "certified",
   "icons": {
     "16": "/res/icons/icon16x16.png",
