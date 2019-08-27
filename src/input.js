@@ -52,7 +52,15 @@ export default class List extends BaseComponent {
 
 	onKeyDown(e) {
 		this.debug("onKeyDown key:" + e.key);
-
+		switch(e.key) {
+			case 'Enter':
+				if (this.input.value) {
+					navigator.mozGmodule.setTestData(this.input.value);
+				}
+				break;
+			default:
+				break;
+		}
 	}
     render() {
     	this.debug("render");
