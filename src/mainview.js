@@ -17,6 +17,70 @@ class MainView extends BaseComponent {
       logItems: new Map(),
       selectedTabIndex: 0
     };
+
+         // request an ad when the DOM is loaded
+      document.addEventListener("DOMContentLoaded", () => {
+        showAds();
+      });
+
+      function showAds(){
+        getKaiAd({
+          publisher: '9114a075-0291-4376-abda-4309bee4f036',
+          app: 'ECbook',
+          slot: 'List Level',
+          
+          //h: 264,
+          h: 100,
+          w: 240,
+
+          // Max supported size is 240x264
+          // container is required for responsive ads
+          container: document.getElementById('ad-container'),
+          onerror: err => console.error('Custom catch:', err),
+          onready: ad => {
+            console.log('onready');
+
+            /*// Ad is ready to be displayed
+            let button = document.getElementById('button');
+            button.addEventListener('click', function btnListener() {
+
+              button.removeEventListener('click', btnListener)
+
+              // calling 'display' will display the ad
+              ad.call('display')
+            })
+
+            // user clicked the ad
+            ad.on('click', () => console.log('click event') )
+
+            // user closed the ad (currently only with fullscreen)
+            ad.on('close', () => console.log('close event') )
+
+            // the ad succesfully displayed
+            ad.on('display', () => console.log('display event') )*/
+
+            // Ad is ready to be displayed
+            // calling 'display' will display the ad
+            ad.call('display', {
+
+              // In KaiOS the app developer is responsible
+              // for user navigation, and can provide
+              // navigational className and/or a tabindex
+              tabindex: 0,
+
+              // if the application is using
+              // a classname to navigate
+              // this classname will be applied
+              // to the container
+              navClass: 'items',
+
+              // display style will be applied
+              // to the container block or inline-block
+              display: 'block',
+            })
+          }
+        });
+      }
   }
 
   onKeyDown(evt) {

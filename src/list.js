@@ -47,7 +47,6 @@ export default class List extends BaseComponent {
 
 	onClick(e) {
 		this.debug("onClick");
-
 	}
 
 	onKeyDown(e) {
